@@ -1,23 +1,19 @@
 int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-    unsigned int index;
+    unsigned int i;
 
-    if (n == 0)
+    i = 0;
+    while (i < n && s1[i] != '\0' && s2[i] != '\0')
     {
-        return (0);
-    }
-    index = 0;
-    while (index < n && s1[index] != '\0' && s2[index] != '\0')
-    {
-        if (s1[index] != s2[index])
+        if (s1[i] != s2[i])
         {
-            return (s1[index] - s2[index]);
+            return (s1[i] - s2[i]);
         }
-        index++;
+        i++;
     }
-    if (index == n)
+    if (i == n)
     {
         return (0);
     }
-    return (s1[index] - s2[index]);
+    return (s1[i] - s2[i]);
 }

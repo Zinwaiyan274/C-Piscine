@@ -1,15 +1,15 @@
 int ft_strcmp(char *s1, char *s2)
 {
-    unsigned int index;
+    unsigned int i;
 
-    index = 0;
-    while (s1[index] != '\0' && s2[index] != '\0')
+    i = 0;
+    while (s1[i] != '\0' && s2[i] != '\0')
     {
-        if (s1[index] != s2[index])
+        if (s1[i] != s2[i])
         {
-           return   (s1[index] - s2[index]); 
+            return (s1[i] - s2[i]);
         }
-        index++;
+        i++;
     }
-    return (s1[index] - s2[index]);
+    return (s1[i] - s2[i]);
 }
