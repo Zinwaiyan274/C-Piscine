@@ -1,0 +1,13 @@
+1. check the relative files are included. If yes, 
+2. stat -f '%Lp' testShell00 to check 455 permission
+3. wc -c < testShell00 to check byte 40. 
+
+OR you can check with below script
+
+
+[ -f testShell00 ] &&
+[ "$(stat -f '%Lp' testShell00)" = "455" ] &&
+[ "$(wc -c < testShell00)" -eq 40 ] &&
+echo "OK"
+
+
