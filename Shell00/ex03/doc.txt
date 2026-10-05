@@ -1,0 +1,39 @@
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+Press Enter through the prompts to use the default:
+
+~/.ssh/id_ed25519
+
+Then display your public key:
+
+cat ~/.ssh/id_ed25519.pub
+
+If your 42 environment specifically requires an RSA key like the one you showed:
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+Then:
+
+cat ~/.ssh/id_rsa.pub
+Check which keys you already have
+ls -la ~/.ssh
+
+Look for:
+
+id_ed25519
+id_ed25519.pub
+
+or:
+
+id_rsa
+id_rsa.pub
+
+Only copy/share the .pub file. Never share id_rsa or id_ed25519 (without .pub).
+
+
+When you done connect your pc public ssh key with your 42 intra. then 
+Please paste your ssh key file "id_rsa_pub", Inside that the sample is like below 
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCX0AP5/Qt9d8/IE1NVBTRWC1GYG4TszqocX0DPyGGJY+cf3rtV4uEHTk1nS4Sv07al3i4hP7qUXd6+VUThVnztrHPj+Q7Q58B3C1glZL7LXO8+VUC1CajJjZwEasrMl49ZUybEqFj1h/efdWf2xXQgD6s7pco1raMn1XK9XQXKALx/VdcnCBTzLK5QwtzAe7nY1EwvWl/ALjk/HS7GMTkfL+XtnxxB3Uw2D5z2d3eaAGYSGl31YWJuOkXb5ree8Z3f3/y+PS1z/69kmaZZH5Ym3ycOgyu1n+3ECSmfyckOkvt4NL7CSGdNAYiOEkusOFIs80kUR++gw+WcT/Hy2H6sLHSZ7HydZHzjrDYHi30PWrNX23TGcMknC3EL6QGZzXD/5tawOuCPl/STkzwT/d8Fl7yueHgMCfpNntuWU7/E0JajvjnZQP26F9W/1ctoIgcomCQBMpeqyULl+/GH8STZvqlHD9RfCqPCf/VXEiHFxfhQh2eUfGR38Ygy3NGXJok= butna@mamma
+
+Then, Voola, you did it !
