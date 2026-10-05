@@ -1,0 +1,12 @@
+touch git_ignore.sh
+
+#!/bin/sh
+git ls-files --others --ignored --exclude-standard
+
+chmod +x git_ignore.sh
+
+
+You can test sample with touch .DS_Store
+then bash git_ignore.sh
+if output show ignoreed file ".DS_Store" it works.
+ 

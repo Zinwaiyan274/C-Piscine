@@ -1,0 +1,43 @@
+1. Create files/directories
+mkdir test0 test2
+echo -n "1234" > test1
+echo -n "1" > test3
+echo -n "12" > test4
+echo -n "1" > test5
+ln -s test0 test6
+
+mkdir test0 test2 && echo -n "1234" > test1 && echo -n "1" > test3 && echo -n "12" > test4 && echo -n "1" > test5 && ln -s test0 test6
+
+2. Set permissions
+
+chmod 715 test0 && chmod 714 test1 && chmod 504 test2 && chmod 404 test3 && chmod 461 test4 && chmod 404 test5
+
+Note: You don't chmod test6; the symlink permissions are automatically displayed as lrwxr-xr-x.
+
+3. Check
+ls -l
+
+You should get approximately:
+
+drwx--xr-x  2 ... ... ... test0
+-rwx--xr--  1 ... ... 4   test1
+dr-x---r--  2 ... ... ... test2
+-r-----r--  1 ... ... 1   test3
+-rw-r----x  1 ... ... 2   test4
+-r-----r--  1 ... ... 1   test5
+lrwxr-xr-x  1 ... ... 5   test6 -> test0
+
+The timestamps don't need to exactly match; the exercise says a year is accepted instead of the time.
+
+4. Create the submission tar
+
+Once everything is correct:
+
+tar -cf exo2.tar *
+
+Then verify:
+
+tar -tvf exo2.tar
+
+You should see all 7 required entries inside the archive
+

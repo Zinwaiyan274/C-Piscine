@@ -1,0 +1,8 @@
+touch git_commit.sh
+
+#!/bin/sh
+git log --format="%H" -5
+
+
+chmod +x git_commit.sh
+

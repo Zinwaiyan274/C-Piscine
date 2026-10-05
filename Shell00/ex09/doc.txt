@@ -1,0 +1,10 @@
+- echo '41 string 42 42 file' > ft_magic
+
+Create good file 
+- echo -n '                                         42' > good
+
+Create bad file 
+- echo -n '                                        ' > bad; echo -n '42' >> bad
+
+Test it. 
+- file -m ft_magic good bad
