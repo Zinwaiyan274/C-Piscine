@@ -1,0 +1,6 @@
+printf '42' > '\?$*'\''MaRViN'\''*$?\'
+
+zinwaiyan@Zins-MacBook-Pro ex05 % ls -lRa *MaRViN* | cat -e
+-rw-r--r--@ 1 zinwaiyan  staff  2 Oct  6 20:21 \?$*'MaRViN'*$?\$
+zinwaiyan@Zins-MacBook-Pro ex05 % cat '\?$*'\''MaRViN'\''*$?\' | cat -e
+42%                                                                                                                    
